@@ -1,0 +1,6 @@
+{
+  "name": "Focus Flow",
+  "description": "A serene focus sanctuary to cultivate deep work through plant growth and calming soundscapes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
