@@ -38,19 +38,19 @@ export default function SettingsTab({
   return (
     <div className="animate-in fade-in duration-800 max-w-2xl mx-auto select-none">
       
-      <h3 className="font-sans text-2xl font-semibold mb-6 text-on-surface dark:text-zinc-100">
+      <h3 className="font-sans text-2xl font-semibold mb-6 text-on-surface">
         Sanctuary Preferences
       </h3>
 
-      <div className="bg-white/80 dark:bg-zinc-900/40 backdrop-blur-md rounded-2xl border border-secondary-fixed dark:border-zinc-800 overflow-hidden shadow-sm">
+      <div className="bg-surface-container-lowest/70 backdrop-blur-md rounded-2xl border border-outline-variant/20 overflow-hidden shadow-sm">
         
         {/* Ambient Soundscapes selector */}
-        <div className="p-5 border-b border-secondary-fixed/55 dark:border-zinc-800 flex flex-col gap-4">
+        <div className="p-5 border-b border-outline-variant/15 flex flex-col gap-4">
           <div className="flex items-center gap-4">
-            <Volume2 className="h-6 w-6 text-secondary dark:text-zinc-400" />
+            <Volume2 className="h-6 w-6 text-secondary" />
             <div>
-              <p className="font-sans text-sm font-semibold text-on-surface dark:text-zinc-150">Soundscape</p>
-              <p className="text-xs text-secondary dark:text-zinc-405 leading-relaxed">Choose your background focus audio synthesizer</p>
+              <p className="font-sans text-sm font-semibold text-on-surface">Soundscape</p>
+              <p className="text-xs text-secondary leading-relaxed">Choose your background focus audio synthesizer</p>
             </div>
           </div>
           
@@ -63,8 +63,8 @@ export default function SettingsTab({
                   onClick={() => handleSoundSelect(type)}
                   className={`px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider cursor-pointer border transition-all active:scale-95 flex items-center gap-1 ${
                     active
-                      ? 'bg-primary dark:bg-emerald-800 text-on-primary border-primary dark:border-emerald-700 shadow-sm'
-                      : 'bg-secondary-container/30 dark:bg-zinc-800/30 hover:bg-secondary-fixed dark:hover:bg-zinc-800 text-on-secondary-fixed-variant dark:text-zinc-300 border-transparent'
+                      ? 'bg-primary text-on-primary border-primary shadow-sm'
+                      : 'bg-secondary-container/30 hover:bg-surface-container text-secondary border-transparent'
                   }`}
                 >
                   {type} {active && <Check className="h-3 w-3 inline ml-0.5" />}
@@ -75,19 +75,19 @@ export default function SettingsTab({
         </div>
 
         {/* Dark Mode Toggle Switch */}
-        <div className="p-5 border-b border-secondary-fixed/55 dark:border-zinc-800 flex items-center justify-between">
+        <div className="p-5 border-b border-outline-variant/15 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <Moon className="h-6 w-6 text-secondary dark:text-zinc-400" />
+            <Moon className="h-6 w-6 text-secondary" />
             <div>
-              <p className="font-sans text-sm font-semibold text-on-surface dark:text-zinc-150">Dark Mode</p>
-              <p className="text-xs text-secondary dark:text-zinc-405 leading-relaxed">Easier on the eyes during late night contemplation</p>
+              <p className="font-sans text-sm font-semibold text-on-surface">Dark Mode</p>
+              <p className="text-xs text-secondary leading-relaxed">Easier on the eyes during late night contemplation</p>
             </div>
           </div>
           
           <button
             onClick={toggleDarkMode}
             className={`w-11 h-6 rounded-full p-0.5 transition-all duration-300 ${
-              darkMode ? 'bg-primary dark:bg-emerald-700' : 'bg-secondary-fixed dark:bg-zinc-800'
+              darkMode ? 'bg-primary' : 'bg-outline-variant/30'
             }`}
             aria-label="Toggle dark mode"
           >
@@ -100,19 +100,19 @@ export default function SettingsTab({
         </div>
 
         {/* Daily Session Reminders switch */}
-        <div className="p-5 border-b border-secondary-fixed/55 dark:border-zinc-800 flex items-center justify-between">
+        <div className="p-5 border-b border-outline-variant/15 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <Bell className="h-6 w-6 text-secondary dark:text-zinc-400" />
+            <Bell className="h-6 w-6 text-secondary" />
             <div>
-              <p className="font-sans text-sm font-semibold text-on-surface dark:text-zinc-150">Session Reminders</p>
-              <p className="text-xs text-secondary dark:text-zinc-405 leading-relaxed">Daily morning nudge to practice focused mind breathing</p>
+              <p className="font-sans text-sm font-semibold text-on-surface">Session Reminders</p>
+              <p className="text-xs text-secondary leading-relaxed">Daily morning nudge to practice focused mind breathing</p>
             </div>
           </div>
           
           <button
             onClick={showRemindersTrigger}
             className={`w-11 h-6 rounded-full p-0.5 transition-all duration-300 ${
-              reminders ? 'bg-primary dark:bg-emerald-700' : 'bg-secondary-fixed dark:bg-zinc-800'
+              reminders ? 'bg-primary' : 'bg-outline-variant/30'
             }`}
             aria-label="Toggle reminders"
           >
@@ -127,16 +127,16 @@ export default function SettingsTab({
         {/* Account Security Privacy card */}
         <button
           onClick={showSecurityAlert}
-          className="w-full p-5 flex items-center justify-between hover:bg-zinc-50 dark:hover:bg-zinc-800/10 transition-colors border-none text-left cursor-pointer focus:outline-none"
+          className="w-full p-5 flex items-center justify-between hover:bg-surface-container/20 transition-colors border-none text-left cursor-pointer focus:outline-none"
         >
           <div className="flex items-center gap-4">
-            <ShieldCheck className="h-6 w-6 text-secondary dark:text-zinc-400" />
+            <ShieldCheck className="h-6 w-6 text-secondary" />
             <div>
-              <p className="font-sans text-sm font-semibold text-on-surface dark:text-zinc-150">Account Security</p>
-              <p className="text-xs text-secondary dark:text-zinc-405 leading-relaxed">Manage your secure local sandbox storage and privacy</p>
+              <p className="font-sans text-sm font-semibold text-on-surface">Account Security</p>
+              <p className="text-xs text-secondary leading-relaxed">Manage your secure local sandbox storage and privacy</p>
             </div>
           </div>
-          <ChevronRight className="h-5 w-5 text-secondary opacity-60 dark:text-zinc-400" />
+          <ChevronRight className="h-5 w-5 text-secondary opacity-60" />
         </button>
 
       </div>

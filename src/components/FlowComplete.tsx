@@ -148,17 +148,17 @@ export default function FlowComplete({
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-center mb-8"
         >
-          <h2 className="font-sans text-3xl md:text-4px font-bold text-primary dark:text-emerald-400 mb-2">
+          <h2 className="font-sans text-3xl md:text-4px font-bold text-primary mb-2">
             Flow Complete
           </h2>
-          <p className="font-sans text-base md:text-lg text-secondary dark:text-zinc-400">
+          <p className="font-sans text-base md:text-lg text-secondary">
             A moment of serenity, achieved.
           </p>
         </motion.div>
 
         {/* Grown plant showcase centerpiece */}
         <div className="relative w-full max-w-sm aspect-square flex items-center justify-center mb-10">
-          <div className="absolute inset-0 bg-primary-container/10 dark:bg-emerald-950/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute inset-0 bg-primary-container/10 rounded-full blur-3xl animate-pulse"></div>
           
           <motion.div
             initial={{ y: 20, opacity: 0 }}
@@ -169,7 +169,7 @@ export default function FlowComplete({
             {/* The hotlinked professional grown succulent mockup */}
             <img
               alt="Beautiful lush green grown plant"
-              className="w-56 h-56 md:w-64 md:h-64 object-cover rounded-3xl shadow-lg border border-primary-fixed-dim/40 dark:border-zinc-800 hover:scale-103 transition-transform duration-500 filter"
+              className="w-56 h-56 md:w-64 md:h-64 object-cover rounded-3xl shadow-lg border border-primary-container/40 hover:scale-103 transition-transform duration-500 filter"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI6Lc8tWho1PDwvCHkppf6ulsPI-GFZfyuXDHeey_DY1M0z-sifAR9MZK4W_Cmu8EbXHV_sdsOmU0_Z0DkSxpYETvGeFjOvj-H1iXOmzpSW2Uy8G0QlobRVEtyqcYFVNEjtkW31LHufSFTmk63OynzNihhAnZulu00Tzh046TU8dO0rX9d9ZR1xcNLoAO6Tzw3wzNsTcnHnZaVN4HJNeLWEnMpV07mzKOanDaoEIIMwRdQJWm30EmGSIeURDDYnFOEp00RMVkfd41F"
               referrerPolicy="no-referrer"
             />
@@ -179,10 +179,10 @@ export default function FlowComplete({
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.6 }}
-              className="mt-4 bg-white/85 dark:bg-zinc-800/90 backdrop-blur-md border border-primary-fixed-dim dark:border-zinc-700 px-4 py-2 rounded-full flex items-center gap-2 shadow-sm"
+              className="mt-4 bg-surface-container/90 backdrop-blur-md border border-primary-container/30 px-4 py-2 rounded-full flex items-center gap-2 shadow-sm"
             >
-              <Star className="h-4 w-4 text-emerald-600 dark:text-emerald-400 fill-emerald-600 dark:fill-emerald-400" />
-              <span className="text-[10px] tracking-widest font-extrabold text-on-primary-container dark:text-emerald-100 uppercase">
+              <Star className="h-4 w-4 text-primary fill-primary" />
+              <span className="text-[10px] tracking-widest font-extrabold text-primary uppercase">
                 Grown: {plantType}
               </span>
             </motion.div>
@@ -192,22 +192,22 @@ export default function FlowComplete({
         {/* Dynamic Statistics cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl mb-12">
           
-          <div className="bg-white/75 dark:bg-zinc-900/40 backdrop-blur-md border border-secondary-fixed dark:border-zinc-800 p-6 rounded-2xl flex flex-col items-center text-center shadow-sm">
-            <Timer className="h-8 w-8 text-primary dark:text-emerald-400 mb-2" />
-            <p className="font-sans text-lg font-bold text-on-surface dark:text-zinc-100">
+          <div className="bg-surface-container-lowest/75 backdrop-blur-md border border-outline-variant/20 p-6 rounded-2xl flex flex-col items-center text-center shadow-sm">
+            <Timer className="h-8 w-8 text-primary mb-2" />
+            <p className="font-sans text-lg font-bold text-on-surface">
               {duration} Minutes Focused
             </p>
-            <p className="text-[10px] tracking-wider font-semibold text-secondary dark:text-zinc-400 mt-1 uppercase">
+            <p className="text-[10px] tracking-wider font-semibold text-secondary mt-1 uppercase">
               TOTAL DURATION
             </p>
           </div>
 
-          <div className="bg-white/75 dark:bg-zinc-900/40 backdrop-blur-md border border-secondary-fixed dark:border-zinc-800 p-6 rounded-2xl flex flex-col items-center text-center shadow-sm">
-            <Heart className="h-8 w-8 text-rose-500/80 dark:text-rose-400 mb-2" />
-            <p className="font-sans text-lg font-bold text-on-surface dark:text-zinc-100">
+          <div className="bg-surface-container-lowest/75 backdrop-blur-md border border-outline-variant/20 p-6 rounded-2xl flex flex-col items-center text-center shadow-sm">
+            <Heart className="h-8 w-8 text-rose-500/80 mb-2" />
+            <p className="font-sans text-lg font-bold text-on-surface">
               1 Plant Added to your Garden
             </p>
-            <p className="text-[10px] tracking-wider font-semibold text-secondary dark:text-zinc-400 mt-1 uppercase">
+            <p className="text-[10px] tracking-wider font-semibold text-secondary mt-1 uppercase">
               GROWTH REWARD
             </p>
           </div>
@@ -218,14 +218,14 @@ export default function FlowComplete({
         <div className="flex flex-col md:flex-row gap-4 w-full max-w-md">
           <button
             onClick={onStartAnother}
-            className="flex-1 bg-primary dark:bg-emerald-800 text-on-primary py-4 px-6 rounded-xl font-sans text-sm font-semibold hover:opacity-90 active:scale-97 transition-all shadow-md cursor-pointer flex items-center justify-center gap-2"
+            className="flex-1 bg-primary text-on-primary py-4 px-6 rounded-xl font-sans text-sm font-semibold hover:opacity-90 active:scale-97 transition-all shadow-md cursor-pointer flex items-center justify-center gap-2"
           >
             Start Another Flow
             <ArrowRight className="h-4 w-4" />
           </button>
           <button
             onClick={onBackToDashboard}
-            className="flex-1 bg-secondary-container dark:bg-zinc-800 text-on-secondary-container dark:text-zinc-200 py-4 px-6 rounded-xl font-sans text-sm font-semibold hover:bg-secondary-fixed dark:hover:bg-zinc-700 active:scale-97 transition-all border border-secondary-fixed dark:border-zinc-700 cursor-pointer flex items-center justify-center gap-2"
+            className="flex-1 bg-secondary-container text-on-secondary-container py-4 px-6 rounded-xl font-sans text-sm font-semibold hover:bg-surface-container active:scale-97 transition-all border border-outline-variant/30 cursor-pointer flex items-center justify-center gap-2"
           >
             <LayoutDashboard className="h-4 w-4" />
             Back to Dashboard

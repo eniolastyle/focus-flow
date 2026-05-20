@@ -208,7 +208,7 @@ export default function App() {
 
   // Render main screen coordinates setup
   return (
-    <div className="min-h-screen bg-background dark:bg-zinc-950 text-on-surface dark:text-zinc-100 transition-colors duration-500 pb-20 md:pb-6">
+    <div className="min-h-screen bg-background text-on-surface transition-colors duration-500 pb-20 md:pb-6">
       {/* Top logo header and desktop tab links */}
       <Navigation
         currentTab={currentTab}
